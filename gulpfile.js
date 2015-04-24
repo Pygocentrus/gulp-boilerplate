@@ -180,14 +180,11 @@ gulp.task('clean-after', function() {
 });
 
 /* Simple scripts and styles build */
-gulp.task('default', ['scripts', 'styles']);
-
-/* Build task, concat & uglify + image optimization */
-gulp.task('build', gulpSequence('clean-before', ['build-styles', 'build-scripts'], ['build-html', 'images', 'copy'], 'clean-after'));
-
-/* Bonus task */
-gulp.task('test', function() {
+gulp.task('default', ['scripts', 'styles'], function() {
   wallpaper.set('app/img/cat.jpg', function() {
     console.log('much love <3');
   });
 });
+
+/* Build task, concat & uglify + image optimization */
+gulp.task('build', gulpSequence('clean-before', ['build-styles', 'build-scripts'], ['build-html', 'images', 'copy'], 'clean-after'));
