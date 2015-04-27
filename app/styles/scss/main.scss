@@ -1,8 +1,5 @@
 @import 'bootstrap';
-
 @import 'utils/colors';
 
-body {
-	@include make-row();
-	background-color: $salmon;
-}
+@import 'base/base';
+@import 'layout/layout';

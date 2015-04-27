@@ -137,7 +137,12 @@ gulp.task('serve', ['styles', 'scripts'], function () {
   browserSync({
     // proxy: conf.paths.proxy || undefined,
     notify: false,
-    server: "./" + conf.paths.app
+    server: "./" + conf.paths.app,
+    ghostMode: {
+      clicks: true,
+      forms: true,
+      scroll: true
+    }
   });
 
   /* Watch styles */
