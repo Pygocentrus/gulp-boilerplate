@@ -5258,14 +5258,7 @@ button.close {
     display: none !important; } }
 
 body {
-  margin-left: -15px;
-  margin-right: -15px;
   background-color: salmon; }
-  body:before, body:after {
-    content: " ";
-    display: table; }
-  body:after {
-    clear: both; }
 
 h1 {
   color: white; }
